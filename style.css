@@ -51,7 +51,7 @@ nav{
     color: bisque;
 }
 .action-link{
-    margin-right: 20px;
+    margin: 10px;
     color: bisque;
     text-decoration: none;
     background-color: brown;
@@ -66,8 +66,7 @@ header{
     background-size: cover;
 }
 .baner-text{
-
-    margin-top: 150px;
+    padding-top: 150px;
 }
 .wrap-2{
     width: 80%;
@@ -76,30 +75,155 @@ header{
 .links{
     margin-top: 30px;
 }
+body{
+    background-color: black;
+}
 .black{
     border: 2px solid gray;
     background-color: rgb(44, 42, 42);
 }
 .menu a:hover{
     border-bottom: 5px solid rgb(51, 51, 51) ;
-    background-color: rgba(51, 51, 51, 0.493);
+    background-color: rgba(94, 94, 94, 0.493);
+}
+.video-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .video-content video{
+    z-index: -1;
     position: absolute;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 .video-content img{
-    top: 100px;
-    left: 600px;
-    position: relative;
     width: 30%;
 }
 .video-content p{
-    left: 550px;
-    position: relative;
-    color: rgb(155, 155, 155);
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 30px;
+    color: rgb(197, 195, 195);
     font-size: 19px;
-    top: 130px;
 }
+.video-content2 video{
+    width: 90%;
+    margin-top: 100px;
+}
+section{
+    position: relative;
+    height: 100vh;
+}
+.text{
+    position: relative;
+}
+.video-content2{
+    height: auto;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.action-text{
+    z-index: 1;
+    position: relative;
+    top: -100px;
+    background-color: #242424;
+    max-width: 1200px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.action-text p{
+    margin-top: 20px;
+    color: rgb(177, 175, 175);
+    width: 650px;
+    text-align: center;
+
+}
+.action-text H2{
+    margin-top: 50PX;
+    color: aliceblue;
+    background-color: #cd422c;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+.p{
+    text-transform: uppercase;
+    margin: 10px;
+    padding: 5px;
+    background-color: #cd422c;
+}
+.action-text h1{
+    color: rgb(177, 175, 175);
+}
+.border{
+    z-index: -1;
+    position: relative;
+    top: 30px;
+    border: none;
+    height: 3px;
+    background-color: #cd422c;
+    border-radius: 100%;
+}
+.rust-quote-flat {
+    background-color: #171717;
+    padding: 100px 20px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+.rust-quote-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.rust-quote-main-text {
+    color: #f0f0f0;
+    font-size: 2.3rem;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+.rust-quote-main-text::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ce422b, transparent);
+    margin: 30px auto;
+}
+
+.rust-quote-sub-author {
+    color: #858585;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+@media (max-width:1000px) {
+    header nav{display: none;}
+    header {
+        background-position:  60% center;
+        background-size: cover;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+    }
+    .action-text{
+        padding: 20px;
+        top: -20px;
+    }
+}
+
