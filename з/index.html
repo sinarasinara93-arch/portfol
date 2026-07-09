@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='gold' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%23B8860B'/><stop offset='25%' stop-color='%23FFD700'/><stop offset='50%' stop-color='%23FFF8DC'/><stop offset='75%' stop-color='%23DAA520'/><stop offset='100%' stop-color='%238B6508'/></linearGradient><filter id='glow'><feGaussianBlur stdDeviation='2' result='coloredBlur'/><feMerge><feMergeNode in='coloredBlur'/><feMergeNode in='SourceGraphic'/></feMerge></filter></defs><circle cx='50' cy='50' r='38' fill='none' stroke='url(%23gold)' stroke-width='14' filter='url(%23glow)'/><circle cx='50' cy='30' r='10' fill='url(%23gold)' filter='url(%23glow)'/></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHINASS GOLD — Магазин золота</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">CHINASS<span> GOLD</span></div>
+        <nav class="nav">
+            <a href="#" class="nav-link active" data-filter="all">Все изделия</a>
+            <a href="#" class="nav-link" data-filter="rings">Кольца</a>
+            <a href="#" class="nav-link" data-filter="chains">Цепочки</a>
+            <a href="#" class="nav-link" data-filter="earrings">Серьги</a>
+            <a href="#" class="nav-link" data-filter="bracelets">Браслеты</a>
+        </nav>
+        <div class="cart-icon" id="open-cart-btn">🛒 <span id="cart-count">0</span></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Исключительное золото для исключительных моментов</h1>
+            <p>Эксклюзивные коллекции колец, цепочек и аксессуаров из чистого золота.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Наш ассортимент</h2>
+        
+        <div class="products-grid" id="products-container">
+            
+            <div class="product-card" data-category="rings" data-name="Кольцо из желтого золота" data-price="45000">
+                <div class="product-badge">Top</div>
+                <img src="" alt="Кольцо из желтого золота" class="product-img">
+                <div class="product-info">
+                    <h3>Кольцо из желтого золота</h3>
+                    <p class="price">45 000 сом</p>
+                    <button class="buy-btn">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="rings" data-name="Кольцо с бриллиантом" data-price="89000">
+                <img src="" alt="Кольцо с бриллиантом" class="product-img">
+                <div class="product-info">
+                    <h3>Кольцо с бриллиантом</h3>
+                    <p class="price">89 000 сом</p>
+                    <button class="buy-btn">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="chains" data-name="Цепочка Бисмарк 585 пробы" data-price="62000">
+                <img src="" alt="Цепочка Бисмарк" class="product-img">
+                <div class="product-info">
+                    <h3>Цепочка "Бисмарк" 585 пробы</h3>
+                    <p class="price">62 000 сом</p>
+                    <button class="buy-btn">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="chains" data-name="Тонкая якорная цепочка" data-price="28000">
+                <img src="" alt="Тонкая якорная цепочка" class="product-img">
+                <div class="product-info">
+                    <h3>Тонкая якорная цепочка</h3>
+                    <p class="price">28 000 сом</p>
+                    <button class="buy-btn">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="earrings" data-name="Золотые серьги с топазом" data-price="37500">
+                <img src="" alt="Золотые серьги с топазом" class="product-img">
+                <div class="product-info">
+                    <h3>Золотые серьги с топазом</h3>
+                    <p class="price">37 500 сом</p>
+                    <button class="buy-btn">В корзину</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="bracelets" data-name="Жесткий золотой браслет" data-price="54000">
+                <img src="" alt="Жесткий золотой браслет" class="product-img">
+                <div class="product-info">
+                    <h3>Жесткий золотой браслет</h3>
+                    <p class="price">54 000 сом</p>
+                    <button class="buy-btn">В корзину</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="cart-modal">
+        <div class="modal-window">
+            <button class="close-modal" id="close-cart-btn">&times;</button>
+            <h2>Ваша корзина</h2>
+            
+            <div class="cart-items-list" id="cart-items-container">
+                <p class="empty-cart-text">Корзина пока пуста...</p>
+            </div>
+            
+            <div class="cart-summary">
+                <p>Итого: <span id="total-price">0</span> сом</p>
+            </div>
+
+            <form class="checkout-form" id="checkout-form">
+                <input type="text" id="client-name" placeholder="Ваше имя" required>
+                <input type="tel" id="client-phone" placeholder="Ваш телефон" required>
+                <button type="submit" class="submit-order-btn">Оформить заказ в WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
